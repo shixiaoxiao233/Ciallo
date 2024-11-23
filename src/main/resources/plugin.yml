@@ -1,0 +1,16 @@
+name: Ciallo
+version: '1.21.1'
+main: xiaoxiao.ciallo.Ciallo
+api-version: '1.21'
+commands:
+  ciallo:
+    usage: /ciallo <subcommand>
+    permission: XiaoxiaoPlugin.*
+    permission-message: "你不许Ciallo！"
+    subcommands:
+      reload:
+        usage: /ciallo reload
+        permission: XiaoxiaoPlugin.reload
+permissions:
+  XiaoxiaoPlugin.reload:
+    default: op
