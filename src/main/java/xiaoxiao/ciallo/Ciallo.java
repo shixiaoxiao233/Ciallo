@@ -6,25 +6,26 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import xiaoxiao.ciallo.Logger.LogType;
+import xiaoxiao.ciallo.Logger.Logger;
 
 public final class Ciallo extends JavaPlugin implements Listener {
     private String chatSuffix;
-
     @Override
     public void onEnable() {
         // Plugin startup logic
-        getLogger().info("Ciallo～(∠・ω< )⌒★");
+        Logger.Log("Ciallo～(∠・ω< )⌒★",LogType.Debug);
         saveDefaultConfig();
         chatSuffix = getConfig().getString("chat-suffix", " (∠・ω< )⌒★");
         getServer().getPluginManager().registerEvents(this, this);
-        getLogger().info("XiaoxiaoPlugin 已启用");
+        Logger.Log("XiaoxiaoPlugin 已启用",LogType.Info);
         getCommand("ciallo").setTabCompleter(new CialloTabCompleter());
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        getLogger().info("XiaoxiaoPlugin 已禁用");
+        Logger.Log("XiaoxiaoPlugin 已禁用",LogType.Info);
     }
 
     @EventHandler
