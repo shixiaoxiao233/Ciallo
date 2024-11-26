@@ -1,4 +1,3 @@
-## Star History
 
 <a href="https://star-history.com/#shixiaoxiao233/Ciallo&Date">
  <picture>
